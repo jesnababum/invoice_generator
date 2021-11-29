@@ -24,6 +24,7 @@ Route::get('/', function () {
 // Route::post('/', function () {
 //     return redirect('/items/success');
 // });
+
 Route::resource('items', ProductController::class);
 Route::resource('discounts', DiscountController::class);
 Route::get('/discounts/{id}', array('as' => 'discount', 'uses' => 'DiscountController@create'));
